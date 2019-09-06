@@ -37,9 +37,9 @@
                         <div></div>
                     </td>
                     <td style="padding: 0px; vertical-align: middle;">
-                        <h3 style="margin: 0px; font-size: 18px; color: rgb(0, 0, 0);" color="#000000" class="sc-jhAzac hmXDXQ"><span>Sebastian</span><span>&nbsp;</span><span>Robalino</span></h3>
-                        <p style="margin: 0px; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" color="#000000" font-size="medium" class="sc-fBuWsC eeihxG"><span>Desarrollador Frontend</span></p>
-                        <p style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" color="#000000" font-size="medium" class="sc-fMiknA bxZCMx"><span>Desarrollo Web</span><span>&nbsp;|&nbsp;</span><span>INTERNATIONAL PROFESSIONAL SERVICES S.A.</span></p>
+                        <h3 style="margin: 0px; font-size: 18px; color: rgb(0, 0, 0);" color="#000000" class="sc-jhAzac hmXDXQ"><span>{{$nombre_re}}</span><span>&nbsp;</span><span>{{$apellido_re}}</span></h3>
+                        <p style="margin: 0px; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" color="#000000" font-size="medium" class="sc-fBuWsC eeihxG"><span>{{$cargo['nombre_ca']}}</span></p>
+                        <p style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" color="#000000" font-size="medium" class="sc-fMiknA bxZCMx"><span>{{$cargo['departamento']['titulo_de']}}</span><span>&nbsp;|&nbsp;</span><span>{{$cargo['departamento']['empresa']['nombrel_em']}}</span></p>
                         <table style="font-size: medium; font-family: Trebuchet MS; width: 100%;" class="sc-jDwBTQ dWtMUn" cellspacing="0" cellpadding="0">
                             <tbody>
                             <tr>
