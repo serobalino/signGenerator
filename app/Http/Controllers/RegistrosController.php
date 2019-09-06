@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Registro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class RegistrosController extends Controller
@@ -72,7 +73,12 @@ class RegistrosController extends Controller
      */
     public function show($id)
     {
-        //
+        $firma  =   Registro::with('cargo.departamento.empresa')->where(DB::raw('sha1(md5(id_re))'),$id)->first();
+        if($firma){
+            return view('firma',$firma);
+        }else{
+            return abort(404);
+        }
     }
 
     /**
