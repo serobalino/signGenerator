@@ -20,3 +20,6 @@ Route::get('/', function () {
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('generar',"RegistrosController");
+Route::get('generar/firma/{id}',function(){
+    return view('firma');
+});
