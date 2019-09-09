@@ -17,7 +17,8 @@ class CreateDepartamentosTable extends Migration
             $table->bigIncrements('id_de');
             $table->unsignedBigInteger('id_em');
             $table->string("titulo_de");
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->nullable(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->foreign('id_em')->references('id_em')->on('empresas');
         });
     }

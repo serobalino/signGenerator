@@ -24,7 +24,8 @@ class CreateRegistrosTable extends Migration
             $table->string("skype_re")->nullable();
             $table->string("linkedin_re")->nullable();
             $table->string("github_re")->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->nullable(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->foreign('id_ca')->references('id_ca')->on('cargos');
         });
     }

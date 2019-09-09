@@ -17,7 +17,8 @@ class CreateCargosTable extends Migration
             $table->bigIncrements('id_ca');
             $table->unsignedBigInteger('id_de');
             $table->string("nombre_ca");
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->nullable(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->foreign('id_de')->references('id_de')->on('departamentos');
         });
     }

@@ -25,7 +25,8 @@ class CreateEmpresasTable extends Migration
             $table->string("lat_em");
             $table->string("lng_em");
             $table->string("dominio_em");
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->nullable(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
         DB::table('empresas')->insert([
@@ -35,7 +36,7 @@ class CreateEmpresasTable extends Migration
                 'nombrel_em'    =>  'INTERNATIONAL PROFESSIONAL SERVICES S.A.',
                 'color_em'      =>  '#9a0000',
                 'logo_em'       =>  'https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/logo.jpg?token=ADL5BL56KVHXQKCSW3JNURK5PJN56',
-                'direccion_em'  =>  'Av. 10 de Agosto N° 31162, Mariana de Jesús. Edificio MetroCar 4to Piso',
+                'direccion_em'  =>  'Av. 10 de Agosto N° 311-62, Mariana de Jesús. Edificio MetroCar 4to Piso',
                 'telefono_em'   =>  '022525175',
                 'lat_em'        =>  '-0.189549',
                 'lng_em'        =>  '-78.492309',
