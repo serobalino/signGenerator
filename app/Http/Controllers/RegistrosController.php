@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Notifications\FirmaCreada;
 use App\Registro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
@@ -75,7 +76,8 @@ class RegistrosController extends Controller
      */
     public function show($id)
     {
-        $firma  =   Registro::with('cargo.departamento.empresa')->where(DB::raw('sha1(md5(id_re))'),$id)->first();
+        $codigo =   Crypt::decryptString($id);
+        $firma  =   Registro::with('cargo.departamento.empresa')->find($codigo);
         if($firma){
             return view('firma',$firma);
             //return $firma;

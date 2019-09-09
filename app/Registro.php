@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Translation\HasLocalePreference;
+use Illuminate\Support\Facades\Crypt;
 
 class Registro extends Model
 {
@@ -18,7 +19,7 @@ class Registro extends Model
     protected $hidden               =       ["id_re"];
 
     public function getCodeReAttribute(){
-        return sha1(md5($this->attributes['id_re']));
+        return  Crypt::encryptString($this->attributes['id_re']);
     }
 
     public function getCelpReAttribute(){
