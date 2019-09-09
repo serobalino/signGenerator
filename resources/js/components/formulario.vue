@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label><span>*</span>Celular</label>
-                    <input type="text" v-model="formulario.celular" name="celular" class="form-control" placeholder="0998978458" v-validate="{required:true}"/>
+                    <input type="text" v-model="formulario.celular" name="celular" class="form-control" placeholder="0998978458" v-validate="{required:true,regex: /^[0][8-9][0-9]{7}[0-9]/,max:10}"/>
                     <small class="form-text text-danger">{{ errors.first('celular') }}</small>
                 </div>
                 <div class="form-group">
@@ -27,7 +27,7 @@
                     <small class="form-text text-danger">{{ errors.first('email') }}</small>
                 </div>
                 <div class="form-group">
-                    <label>Extención telefónica</label>
+                    <label>Extensión telefónica</label>
                     <input type="email" v-model="formulario['extención']" name="extención" class="form-control" placeholder="1020" />
                     <small class="form-text text-danger">{{ errors.first('extención') }}</small>
                 </div>
@@ -57,17 +57,17 @@
                 </div>
                 <div class="form-group">
                     <label>Skype(usuario)</label>
-                    <input type="text" v-model="formulario.skype" name="skype" class="form-control" placeholder="carlos.rosales" />
+                    <input type="text" v-model="formulario.skype" name="skype" class="form-control" placeholder="carlos.rosales" v-validate="{regex:/^[a-z][a-z0-9\.,\-_]{5,31}$/i}" />
                     <small class="form-text text-danger">{{ errors.first('skype') }}</small>
                 </div>
                 <div class="form-group">
                     <label>Github (link)</label>
-                    <input type="url" v-model="formulario.github" name="github" class="form-control" placeholder="https://github.com/crosales" />
+                    <input type="text" v-model="formulario.github" name="github" class="form-control" placeholder="https://github.com/crosales" v-validate="{url:true}"  />
                     <small class="form-text text-danger">{{ errors.first('github') }}</small>
                 </div>
                 <div class="form-group">
                     <label>LinkedIn (link)</label>
-                    <input type="url" v-model="formulario.linkedin" name="linkedin" class="form-control" placeholder="https://ec.linkedin.com/in/ricardo-rosales-18317123" />
+                    <input type="text" v-model="formulario.linkedin" name="linkedin" class="form-control" placeholder="https://ec.linkedin.com/in/ricardo-rosales-18317123" v-validate="{url:true}" />
                     <small class="form-text text-danger">{{ errors.first('linkedin') }}</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Generar</button>
@@ -134,7 +134,7 @@
                 this.$validator.validateAll().then((result) => {
                     if (result) {
                         servicios.guardarRegistro(this.formulario).then(response=>{
-                            console.log(response);
+                            window.location.href = response.data.data;
                         });
                     } else {
                         console.log("error")

@@ -1986,7 +1986,7 @@ vee_validate__WEBPACK_IMPORTED_MODULE_1__["Validator"].localize('es', vee_valida
       this.$validator.validateAll().then(function (result) {
         if (result) {
           _servicios__WEBPACK_IMPORTED_MODULE_2__["default"].guardarRegistro(_this4.formulario).then(function (response) {
-            console.log(response);
+            window.location.href = response.data.data;
           });
         } else {
           console.log("error");
@@ -31499,8 +31499,13 @@ var render = function() {
                 {
                   name: "validate",
                   rawName: "v-validate",
-                  value: { required: true },
-                  expression: "{required:true}"
+                  value: {
+                    required: true,
+                    regex: /^[0][8-9][0-9]{7}[0-9]/,
+                    max: 10
+                  },
+                  expression:
+                    "{required:true,regex: /^[0][8-9][0-9]{7}[0-9]/,max:10}"
                 }
               ],
               staticClass: "form-control",
@@ -31566,7 +31571,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group" }, [
-            _c("label", [_vm._v("Extención telefónica")]),
+            _c("label", [_vm._v("Extensión telefónica")]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -31790,6 +31795,12 @@ var render = function() {
                   rawName: "v-model",
                   value: _vm.formulario.skype,
                   expression: "formulario.skype"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: { regex: /^[a-z][a-z0-9\.,\-_]{5,31}$/i },
+                  expression: "{regex:/^[a-z][a-z0-9\\.,\\-_]{5,31}$/i}"
                 }
               ],
               staticClass: "form-control",
@@ -31824,11 +31835,17 @@ var render = function() {
                   rawName: "v-model",
                   value: _vm.formulario.github,
                   expression: "formulario.github"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: { url: true },
+                  expression: "{url:true}"
                 }
               ],
               staticClass: "form-control",
               attrs: {
-                type: "url",
+                type: "text",
                 name: "github",
                 placeholder: "https://github.com/crosales"
               },
@@ -31858,11 +31875,17 @@ var render = function() {
                   rawName: "v-model",
                   value: _vm.formulario.linkedin,
                   expression: "formulario.linkedin"
+                },
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: { url: true },
+                  expression: "{url:true}"
                 }
               ],
               staticClass: "form-control",
               attrs: {
-                type: "url",
+                type: "text",
                 name: "linkedin",
                 placeholder:
                   "https://ec.linkedin.com/in/ricardo-rosales-18317123"
