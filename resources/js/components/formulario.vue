@@ -28,8 +28,8 @@
                 </div>
                 <div class="form-group">
                     <label>Extensión telefónica</label>
-                    <input type="email" v-model="formulario['extención']" name="extención" class="form-control" placeholder="1020" />
-                    <small class="form-text text-danger">{{ errors.first('extención') }}</small>
+                    <input type="text" v-model="formulario['extención']" name="extensión" class="form-control" placeholder="1020" />
+                    <small class="form-text text-danger">{{ errors.first('extensión') }}</small>
                 </div>
                 <div class="form-group">
                     <label><span>*</span>Empresa</label>
