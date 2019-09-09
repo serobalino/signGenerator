@@ -83,6 +83,9 @@
                 <div class="title m-b-md">
                     {{config('app.name')}}
                 </div>
+                <div class="links">
+                    <a href="{{route('generar.index')}}">Generar Firma</a>
+                </div>
             </div>
         </div>
     </body>
