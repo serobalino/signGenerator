@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\FirmaCreada;
 use App\Registro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -61,7 +62,8 @@ class RegistrosController extends Controller
             $nuevo->github_re   =   $request->github;
             $nuevo->id_ca       =   $request->cargo;
             $nuevo->save();
-            return response(['val'=>true,'message'=>"Se registro correctamente",'data'=>null]);
+            $nuevo->notify(new FirmaCreada());
+            return response(['val'=>true,'message'=>"Se ha enviado un email con las instrucciones",'data'=>route('generar.show',$nuevo->code_re)]);
         }
     }
 
@@ -76,6 +78,7 @@ class RegistrosController extends Controller
         $firma  =   Registro::with('cargo.departamento.empresa')->where(DB::raw('sha1(md5(id_re))'),$id)->first();
         if($firma){
             return view('firma',$firma);
+            //return $firma;
         }else{
             return abort(404);
         }
