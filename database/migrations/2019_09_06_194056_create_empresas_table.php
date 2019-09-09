@@ -30,7 +30,7 @@ class CreateEmpresasTable extends Migration
 
         DB::table('empresas')->insert([
             [
-                'id_em'         =>  1,
+                //'id_em'         =>  1,
                 'nombre_em'     =>  'Inpsercom',
                 'nombrel_em'    =>  'INTERNATIONAL PROFESSIONAL SERVICES S.A.',
                 'color_em'      =>  '#9a0000',
