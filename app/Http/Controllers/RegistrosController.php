@@ -6,8 +6,8 @@ use App\Notifications\FirmaCreada;
 use App\Registro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class RegistrosController extends Controller
 {
@@ -76,14 +76,16 @@ class RegistrosController extends Controller
      */
     public function show($id)
     {
-        $codigo =   Crypt::decryptString($id);
-        $firma  =   Registro::with('cargo.departamento.empresa')->find($codigo);
-        if($firma){
-            return view('firma',$firma);
-            //return $firma;
-        }else{
-            return abort(404);
+        try {
+            $codigo =   Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            $codigo =   0;
         }
+        $firma  =   Registro::with('cargo.departamento.empresa')->find($codigo);
+        if($firma)
+            return view('firma',$firma);
+        else
+            return abort(404);
     }
 
     /**
