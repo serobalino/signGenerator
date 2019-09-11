@@ -53,11 +53,11 @@ class RegistrosController extends Controller
             return response(['val'=>false,'message'=>$texto,'data'=>$validacion->errors()->all()],500);
         }else{
             $nuevo              =   new Registro();
-            $nuevo->nombre_re   =   $request->nombre;
-            $nuevo->apellido_re =   $request->apellido;
+            $nuevo->nombre_re   =   mb_convert_case($request->nombre, MB_CASE_TITLE, "UTF-8");
+            $nuevo->apellido_re =   mb_convert_case($request->apellido, MB_CASE_TITLE, "UTF-8");
             $nuevo->celular_re  =   $request->celular;
             $nuevo->ext_re      =   $request["extención"];
-            $nuevo->email_re    =   $request->email;
+            $nuevo->email_re    =   strtolower($request->email);
             $nuevo->skype_re    =   $request->skype;
             $nuevo->linkedin_re =   $request->linkedin;
             $nuevo->github_re   =   $request->github;
