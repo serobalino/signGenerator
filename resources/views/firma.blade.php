@@ -23,17 +23,17 @@
                                             <tr style="text-align: center;">
                                                 @if ($skype_re)
                                                     <td>
-                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="skype:{{$skype_re}}?call" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/skype.png?token=ADL5BL4XBZCC3S224CZJRVK5PJOKW" alt="skype" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
+                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="skype:{{$skype_re}}?call" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/skype.png" alt="skype" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
                                                     </td>
                                                 @endif
                                                 @if ($linkedin_re)
                                                     <td>
-                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="{{$linkedin_re}}" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/linkedin.png?token=ADL5BLYSVEF4ZQ3CAFYY3XS5P66DE" alt="linkeding" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
+                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="{{$linkedin_re}}" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/linkedin.png" alt="linkeding" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
                                                     </td>
                                                 @endif
                                                 @if ($github_re)
                                                     <td>
-                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="{{$github_re}}" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/github.png?token=ADL5BL3K5JBJSIZ2NZZBUFK5P66H4" alt="github" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
+                                                        <a style="display: inline-block; padding: 0px; background-color: {{$cargo['departamento']['empresa']['color_em']}};" href="{{$github_re}}" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-bRBYWo ccSRck"><img style="background-color: {{$cargo['departamento']['empresa']['color_em']}}; max-width: 50px; display: block;" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/github.png" alt="github" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-Rmtcm gwGgYM" height="17"></a>
                                                     </td>
                                                 @endif
                                                 <td width="5">
@@ -70,19 +70,19 @@
                                         <table style="font-size: medium; font-family: Trebuchet MS;" cellspacing="0" cellpadding="0">
                                             <tbody>
                                             <tr>
-                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/telefono.png?token=ADL5BL3RSJVRN6TZETHMRXS5PJNYO" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
+                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/telefono.png" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
                                             </tr>
                                             </tbody>
                                         </table>
                                     </td>
-                                    <td style="padding: 0px; color: rgb(0, 0, 0);"><a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cargo['departamento']['empresa']['tell_em']}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$cargo['departamento']['empresa']['telp_em']}}</span></a> | <a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cell_re}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$celp_re}}</span></a></td>
+                                    <td style="padding: 0px; color: rgb(0, 0, 0);"><a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cargo['departamento']['empresa']['tell_em']}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$cargo['departamento']['empresa']['telp_em']}}</span>  @if ($ext_re) <span>Ext.: {{$ext_re}}</span>@endif </a> | <a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cell_re}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$celp_re}}</span></a></td>
                                 </tr>
                                 <tr style="vertical-align: middle;" height="17">
                                     <td style="vertical-align: middle;" width="15">
                                         <table style="font-size: medium; font-family: Trebuchet MS;" cellspacing="0" cellpadding="0">
                                             <tbody>
                                             <tr>
-                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/email.png?token=ADL5BLYWT5UM5DV2EUUHWBS5PJOOE" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
+                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/email.png" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -94,7 +94,7 @@
                                         <table style="font-size: medium; font-family: Trebuchet MS;" cellspacing="0" cellpadding="0">
                                             <tbody>
                                             <tr>
-                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/web.png?token=ADL5BL4JZQHIZC2EZNUTKDK5PJORE" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
+                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/web.png" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -106,7 +106,7 @@
                                         <table style="font-size: medium; font-family: Trebuchet MS;" cellspacing="0" cellpadding="0">
                                             <tbody>
                                             <tr>
-                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/Inpsercom-IT/ebiss/firma/mapa.png?token=ADL5BLY2WABDSLVQID3SBV25PJOUY" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
+                                                <td style="vertical-align: bottom;"><span width="11" style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" color="{{$cargo['departamento']['empresa']['color_em']}}" class="sc-iRbamj blSEcj"><img style="display: block; background-color: {{$cargo['departamento']['empresa']['color_em']}};" src="https://raw.githubusercontent.com/serobalino/signGenerator/master/public/images/mapa.png" color="{{$cargo['departamento']['empresa']['color_em']}}"  width="13"></span></td>
                                             </tr>
                                             </tbody>
                                         </table>
