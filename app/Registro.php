@@ -18,6 +18,8 @@ class Registro extends Model
 
     protected $hidden               =       ["id_re"];
 
+    protected $dateFormat = 'Y-d-m H:i:s.v';
+
     public function getCodeReAttribute(){
         return  Crypt::encryptString($this->attributes['id_re']);
     }

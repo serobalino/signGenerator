@@ -1,5 +1,16 @@
-<div>
-    <br>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Firma</title>
+</head>
+<body>
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+    <br/>
     <table style="font-size: medium; font-family: Trebuchet MS;" cellspacing="0" cellpadding="0">
         <tbody>
         <tr>
@@ -75,7 +86,8 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                    <td style="padding: 0px; color: rgb(0, 0, 0);"><a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cargo['departamento']['empresa']['tell_em']}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$cargo['departamento']['empresa']['telp_em']}}</span>  @if ($ext_re) <span>Ext.: {{$ext_re}}</span>@endif </a> | <a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cell_re}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$celp_re}}</span></a></td>
+                                    <td style="padding: 0px; color: rgb(0, 0, 0);">
+                                        @if ($cargo['departamento']['empresa']['tell_em']) <a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cargo['departamento']['empresa']['tell_em']}}" color="#000000" class="sc-jlyJG bbyJzT"> @if ($cargo['departamento']['empresa']['telp_em'])<span>{{$cargo['departamento']['empresa']['telp_em']}}</span>  @if ($ext_re) <span>Ext.: {{$ext_re}}</span>@endif </a> | @endif @endif <a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="tel:{{$cell_re}}" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$celp_re}}</span></a></td>
                                 </tr>
                                 <tr style="vertical-align: middle;" height="17">
                                     <td style="vertical-align: middle;" width="15">
@@ -111,8 +123,7 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                    <td style="padding: 0px;"><a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="http://maps.google.com/maps?daddr={{$cargo['departamento']['empresa']['lat_em']}},{{$cargo['departamento']['empresa']['lng_em']}}&ll=true" target="_blank" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$cargo['departamento']['empresa']['direccion_em']}}</span></a></span>
-                                    </td>
+                                    <td style="padding: 0px;"><a style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" href="http://maps.google.com/maps?daddr={{$cargo['departamento']['empresa']['lat_em']}},{{$cargo['departamento']['empresa']['lng_em']}}&ll=true" target="_blank" color="#000000" class="sc-jlyJG bbyJzT"><span>{{$cargo['departamento']['empresa']['direccion_em']}}</span></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -131,5 +142,6 @@
         </tr>
         </tbody>
     </table>
-</div>
+</body>
+</html>
 
