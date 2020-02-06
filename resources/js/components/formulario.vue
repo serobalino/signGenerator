@@ -9,12 +9,12 @@
                 <fieldset :disabled="cargando">
                     <div class="form-group">
                         <label><span>*</span>Nombre</label>
-                        <input type="text" v-model="formulario.nombre" name="nombre" class="form-control" placeholder="Carlos" v-validate="{required:true}"/>
+                        <input type="text" v-model="formulario.nombre" name="nombre" class="form-control" placeholder="Carlos" v-validate="{required:true,alpha:true}"/>
                         <small class="form-text text-danger">{{ errors.first('nombre') }}</small>
                     </div>
                     <div class="form-group">
                         <label><span>*</span>Apellido</label>
-                        <input type="text" v-model="formulario.apellido" name="apellido" class="form-control" placeholder="Rosales" v-validate="{required:true}"/>
+                        <input type="text" v-model="formulario.apellido" name="apellido" class="form-control" placeholder="Rosales" v-validate="{required:true,alpha:true}"/>
                         <small class="form-text text-danger">{{ errors.first('apellido') }}</small>
                     </div>
                     <div class="form-group">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label>Extensión telefónica</label>
-                        <input type="text" v-model="formulario['extención']" name="extensión" class="form-control" placeholder="1020" />
+                        <input type="text" v-model="formulario['extención']" name="extensión" class="form-control" placeholder="1020" v-validate="{digits:true}" />
                         <small class="form-text text-danger">{{ errors.first('extensión') }}</small>
                     </div>
                     <div class="form-group">
