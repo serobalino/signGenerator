@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label>Extensión telefónica</label>
-                        <input type="text" v-model="formulario['extención']" name="extensión" class="form-control" placeholder="1020" v-validate="{digits:true}" />
+                        <input type="tel" v-model="formulario['extención']" name="extensión" class="form-control" placeholder="1020" v-validate="{numeric:true}" />
                         <small class="form-text text-danger">{{ errors.first('extensión') }}</small>
                     </div>
                     <div class="form-group">
@@ -63,12 +63,12 @@
                     </div>
                     <div class="form-group">
                         <label>Github (link)</label>
-                        <input type="text" v-model="formulario.github" name="github" class="form-control" placeholder="https://github.com/crosales" v-validate="{url:true}"  />
+                        <input type="url" v-model="formulario.github" name="github" class="form-control" placeholder="https://github.com/crosales" v-validate="{url:true}"  />
                         <small class="form-text text-danger">{{ errors.first('github') }}</small>
                     </div>
                     <div class="form-group">
                         <label>LinkedIn (link)</label>
-                        <input type="text" v-model="formulario.linkedin" name="linkedin" class="form-control" placeholder="https://ec.linkedin.com/in/ricardo-rosales-18317123" v-validate="{url:true}" />
+                        <input type="url" v-model="formulario.linkedin" name="linkedin" class="form-control" placeholder="https://ec.linkedin.com/in/ricardo-rosales-18317123" v-validate="{url:true}" />
                         <small class="form-text text-danger">{{ errors.first('linkedin') }}</small>
                     </div>
                     <button type="submit" class="btn btn-primary" >Generar</button>
