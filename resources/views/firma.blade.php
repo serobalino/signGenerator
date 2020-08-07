@@ -25,7 +25,7 @@
                                     <td style="text-align: center;" ><img style="max-width: 85px; display: block;" src="{{$cargo['departamento']['empresa']['logo_em']}}" role="presentation"  width="50" alt="logo"></td>
                                 </tr>
                                 <tr>
-                                <td style="text-align: center;" ><img style="max-width: 85px; display: block;" src="https://github.com/Inpsercom-IT/app-image/blob/master/inpsercom/firma/certificacion_logo.png?raw=true" role="presentation"  width="50" alt="logo"></td>
+                                <td style="text-align: center;" ><img style="max-width: 85px; display: block;" src="https://github.com/Inpsercom-IT/app-image/blob/master/inpsercom/firma/certificacion_logo.png?raw=true" role="presentation"  width="50" alt="logo-certificado"></td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center;">
